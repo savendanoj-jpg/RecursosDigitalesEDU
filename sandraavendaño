@@ -1,0 +1,94 @@
+# RecursosDigitalesEDU
+
+Repositorio para la gestión y compartición de recursos educativos digitales alineados con estándares internacionales de metadatos (LOM, Dublin Core), especialmente diseñado para universidades y contextos educativos. 
+
+## Características
+
+- **Gestión de recursos:** Documentos, presentaciones, videos, imágenes y enlaces externos.
+- **Flujos de trabajo y roles:** Carga, revisión, evaluación y descarga de recursos con administración por roles (administrador, docente, evaluador, estudiante).
+- **Metadatos estandarizados:** Basados en LOM y Dublin Core.
+- **Búsqueda avanzada:** Filtrado por tipo de recurso, nivel educativo, etiquetas, autor, etc.
+
+## Estructura (propuesta)
+- `backend/` — Lógica y API del proyecto.
+- `frontend/` — Interfaz web para usuarios.
+- `docs/` — Documentación de flujos, roles y ejemplos de metadatos.
+
+Para más información, consulta el archivo `docs/roles-y-flujos.md`.
+MIT License
+
+Copyright (c) 2025 [Tu Nombre]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+[ ...texto completo de la MIT License... ]
+# Node.js
+node_modules/
+.env
+
+# Logs
+logs/
+*.log
+
+# Editor
+.vscode/
+.idea/
+
+# Otros
+.DS_Store
+4. Estructura de carpetas
+Crea (puedes hacerlo con archivos vacíos tipo .gitkeep o simplemente agregando archivos en la web de GitHub) estas carpetas:
+
+backend/
+frontend/
+docs/
+# Roles y flujos de trabajo
+
+## Roles
+
+- **Administrador:** Gestiona la plataforma, usuarios y recursos en general.
+- **Docente:** Sube y revisa recursos propios o de colegas.
+- **Evaluador:** Revisa, comenta y califica recursos antes de su publicación.
+- **Estudiante:** Busca y descarga recursos publicados, puede dejar comentarios.
+
+## Flujos de trabajo
+
+### Carga y publicación de recursos
+1. El docente sube un recurso con metadatos completos.
+2. El recurso pasa por revisión de un evaluador/administrador.
+3. Si es aprobado, se publica. Si es rechazado, retorna al docente con observaciones.
+
+### Descarga y búsqueda
+- Usuarios autenticados pueden buscar y descargar recursos publicados según permisos y filtros.
+
+### Evaluación
+- Los evaluadores puntúan la calidad y dejan recomendaciones antes de publicar.
+
+## Metadatos recomendados (LOM + Dublin Core)
+- Título
+- Descripción
+- Autor
+- Palabras clave
+- Nivel educativo
+- Formato
+- Licencia
+- Idioma
+
+## Ejemplo de metadatos (JSON)
+```json
+{
+  "title": "Introducción a la Programación",
+  "description": "Presentación sobre conceptos básicos.",
+  "author": "Dra. Ana Pérez",
+  "keywords": ["programación", "algoritmos", "básico"],
+  "educationalLevel": "Universidad",
+  "format": "application/pdf",
+  "license": "CC-BY",
+  "language": "es"
+}
+```
